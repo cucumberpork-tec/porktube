@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pork Tube - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+        }
+        .video-player {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+        }
+        .upload-form {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .upload-form input[type="file"] {
+            margin: 1rem 0;
+        }
+        .video-thumbnails {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .thumbnail {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+        }
+        .thumbnail img {
+            width: 100%;
+        }
+        .thumbnail a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 0.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Pork Tube</h1>
+    </header>
+
+    <div class="container">
+        <div class="video-player">
+            <video id="main-video" controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="upload-form">
+            <h2>Upload Your Video</h2>
+            <form id="uploadForm" action="upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="videoFile" accept="video/*" required>
+                <input type="submit" value="Upload Video">
+            </form>
+        </div>
+
+        <div class="video-thumbnails">
+            <!-- Placeholder for video thumbnails -->
+            <div class="thumbnail">
+                <a href="video1.html">
+                    <img src="thumbnail1.jpg" alt="Video Thumbnail 1">
+                    <p>Video Title 1</p>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a href="video2.html">
+                    <img src="thumbnail2.jpg" alt="Video Thumbnail 2">
+                    <p>Video Title 2</p>
+                </a>
+            </div>
+            <!-- Add more thumbnails here -->
+        </div>
+    </div>
+</body>
+</html>
